@@ -7,7 +7,7 @@ import {
     useColorModeValue,
     VisuallyHidden
   } from "@chakra-ui/react"
-  import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa"
+  import {BsInstagram, BsTwitter, BsYoutube} from "react-icons/bs"
   
   const Logo = props => {
     return (
@@ -32,7 +32,7 @@ import {
   const SocialButton = ({ children, label, href }) => {
     return (
       <chakra.button
-        bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+        bg={"#f2d4a2"}
         rounded={"full"}
         w={8}
         h={8}
@@ -44,7 +44,7 @@ import {
         justifyContent={"center"}
         transition={"background 0.3s ease"}
         _hover={{
-          bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200")
+          bg: useColorModeValue("#e9b55f")
         }}
       >
         <VisuallyHidden>{label}</VisuallyHidden>
@@ -56,7 +56,7 @@ import {
   export function FooterComponent() {
     return (
       <Box
-        bg={useColorModeValue("gray.50", "gray.900")}
+        bg={"#eee6df"}
         color={useColorModeValue("gray.700", "gray.200")}
       >
         <Container
@@ -72,13 +72,13 @@ import {
           <Text>© 2023 The Mountain Expedition. All rights reserved.</Text>
           <Stack direction={"row"} spacing={6}>
             <SocialButton label={"Twitter"} href={"#"}>
-              <FaTwitter />
+              <BsTwitter />
             </SocialButton>
             <SocialButton label={"YouTube"} href={"#"}>
-              <FaYoutube />
+              <BsYoutube />
             </SocialButton>
             <SocialButton label={"Instagram"} href={"#"}>
-              <FaInstagram />
+              <BsInstagram />
             </SocialButton>
           </Stack>
         </Container>
