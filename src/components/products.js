@@ -60,17 +60,17 @@ function ProductSimple() {
         </Box>
         <Stack pt={10} align={"center"}>
           <Text color={"gray.500"} fontSize={"sm"} textTransform={"uppercase"}>
-            Brand
+            7oz (200 ml)
           </Text>
           <Heading fontSize={"2xl"} fontFamily={"body"} fontWeight={500}>
-            Nice Chair, pink
+            Mad honey
           </Heading>
           <Stack direction={"row"} align={"center"}>
             <Text fontWeight={800} fontSize={"xl"}>
-              $57
+              $69
             </Text>
             <Text textDecoration={"line-through"} color={"gray.600"}>
-              $199
+              $420
             </Text>
           </Stack>
         </Stack>
