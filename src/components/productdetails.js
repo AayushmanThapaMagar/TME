@@ -13,8 +13,9 @@ import {
     useColorModeValue,
     List,
     ListItem
-  } from "@chakra-ui/react"
-  import { MdLocalShipping } from "react-icons/md"
+  } from "@chakra-ui/react";
+  import { MdLocalShipping } from "react-icons/md";
+
   
   export function Simple() {
     return (

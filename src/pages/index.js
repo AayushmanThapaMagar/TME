@@ -1,9 +1,9 @@
 import { NavBar } from "@/components/navbar";
 // import { CaptionCarousel } from "@/components/carousel";
 import { FooterComponent } from "@/components/footer";
-import { FeaturedProducts } from "@/components/products";
+import { FeaturedProducts } from "@/components/featuredProduct";
 import { GridBlurredBackdrop } from "@/components/testemonials";
-import { SplitScreen } from "@/components/hero.js";
+import { SplitScreen } from "@/components/hero";
 
 export default function Main() {
   return (
