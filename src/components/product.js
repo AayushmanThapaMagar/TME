@@ -9,7 +9,7 @@ import {
   } from "@chakra-ui/react";
   import {swell} from '@/utils/swell';
   
-  const productDetails = await swell.Product.get('642c101ca1da5d0012b902f7');
+  // const productDetails = await swell.Product.get('642c101ca1da5d0012b902f7');
   const IMAGE =
     "https://mellifera.qodeinteractive.com/wp-content/uploads/2020/05/h1-rev-img-12.jpg";
   

@@ -58,6 +58,10 @@ import {
       <Box
         bg={"#eee6df"}
         color={useColorModeValue("gray.700", "gray.200")}
+        // style = {{position: 'fixed',
+        //   bottom: '0',
+        //   left: '0',
+        //   width: '100%',}}
       >
         <Container
           as={Stack}

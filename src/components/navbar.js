@@ -8,6 +8,7 @@ import {
     Stack,
   } from "@chakra-ui/react";
   import { BsCart2 } from "react-icons/bs";
+  import { ProductCategories } from "./productCategories";
   import { HiShoppingCart } from "react-icons/hi";
   import { useRouter } from "next/router";
   
@@ -64,11 +65,14 @@ import {
               style={{
                 display: "flex",
                 justifyContent: "space-between",
+                padding: "0 2rem",
               }}
             >
-              <Button onClick={() => router.push("/")}>Home</Button>
-              <Button>Products</Button>
-              <Button>Our Story</Button>
+              <Button color="#201e26" fontWeight='bold' onClick={() => router.push("/")}>Home</Button>
+              <ProductCategories 
+              padding="0 1rem"
+              />
+              <Button color="#201e26" fontWeight='bold' >Our Story</Button>
   
               <IconButton
                 aria-label="My Cart"
@@ -82,7 +86,7 @@ import {
                 _hover={{
                   bg: "#e9b55f",
                 }}
-                onClick={() => router.push("/products")}
+                onClick={() => router.push("/contact")}
               >
                 Contact Us
               </Button>
