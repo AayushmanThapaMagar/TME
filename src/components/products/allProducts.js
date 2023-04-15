@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import {
+  Flex,
+} from "@chakra-ui/react";
 import swell from "@/utils/swell";
+
+import {Product}  from '@/components/products/displayProducts';
 
 export function AllProducts() {
   const [products, setProducts] = useState([]);
@@ -30,19 +35,10 @@ export function AllProducts() {
   }, []);
 
   return (
-    <div>
-      <h1>Products:</h1>
-      <ul>
-        {products.map(product => (
-          <li key={product.id}>
-            <h2>{product.name}</h2>
-            <p>{product.description}</p>
-            <p>{product.price}</p>
-            <img src={product.images[0].file.url} alt={product.name} />
-            <button>Add to Cart</button>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <Flex flexWrap="wrap" justifyContent="center">
+      {products.map(product => (
+        <Product key={product.id} product={product} />
+      ))}
+    </Flex>
   );
 }

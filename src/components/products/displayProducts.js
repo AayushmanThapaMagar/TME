@@ -1,69 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {
   Box,
-  Center,
-  useColorModeValue,
-  Heading,
   Text,
   Stack,
   Image,
+  Heading,
 } from "@chakra-ui/react";
-import swell from "@/utils/swell";
-
-export function AllProducts() {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        let response = null;
-        while (!response) {
-          response = await swell.get('/products', {
-            where: { active: true },
-            limit: 25,
-            page: 1,
-          });
-          console.log(response)
-          if (response === null) {
-            // If response is null, wait for and try again
-            await new Promise(resolve => setTimeout(resolve, 10));
-          }
-        }
-        setProducts(response.results);
-      } catch (error) {
-        console.error(error);
-      }
-    }
-
-    fetchData();
-  }, []);
-
-  return (
-    <div>
-      <h1>Products:</h1>
-      <ul>
-        {products.map(product => (
-          <Product key={product.id} product={product} />
-        ))}
-      </ul>
-    </div>
-  );
-}
 
 export function Product({ product }) {
   const IMAGE = product.images[0].file.url;
   return (
-    <Center py={12}>
+    <a href={`/products/${product.id}`}>
       <Box
         role={"group"}
         p={6}
         maxW={"330px"}
         w={"full"}
-        bg={useColorModeValue("white", "gray.800")}
+        bg={"white"}
         boxShadow={"2xl"}
         rounded={"lg"}
         pos={"relative"}
         zIndex={1}
+        mb={10}
+        mr={6}
       >
         <Box
           rounded={"lg"}
@@ -98,7 +57,7 @@ export function Product({ product }) {
         </Box>
         <Stack pt={10} align={"center"}>
           <Text color={"gray.500"} fontSize={"sm"} textTransform={"uppercase"}>
-            7oz (200 ml)
+            {/* {product.} */}
           </Text>
           <Heading fontSize={"2xl"} fontFamily={"body"} fontWeight={500}>
             {product.name}
@@ -110,6 +69,6 @@ export function Product({ product }) {
           </Stack>
         </Stack>
       </Box>
-    </Center>
+    </a>
   );
 }

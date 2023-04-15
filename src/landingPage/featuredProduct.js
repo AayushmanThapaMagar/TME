@@ -10,7 +10,7 @@ import {
   Flex,
 } from "@chakra-ui/react";
 
-import { Product } from "./product";
+import { Product } from "../components/productComponent";
 
 export function FeaturedProducts() {
   return (

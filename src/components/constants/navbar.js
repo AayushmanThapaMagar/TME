@@ -1,14 +1,12 @@
 import {
     Button,
     IconButton,
-    Image,
-    position,
     Box,
     Container,
     Stack,
   } from "@chakra-ui/react";
-  import { BsCart2 } from "react-icons/bs";
-  import { ProductCategories } from "./productCategories";
+  // import { BsCart2 } from "react-icons/bs";
+  import { ProductCategories } from "../productCategories";
   import { HiShoppingCart } from "react-icons/hi";
   import { useRouter } from "next/router";
   
@@ -69,9 +67,10 @@ import {
               }}
             >
               <Button color="#201e26" fontWeight='bold' onClick={() => router.push("/")}>Home</Button>
-              <ProductCategories 
+              {/* <ProductCategories 
               padding="0 1rem"
-              />
+              /> */}
+              <Button color="#201e26" fontWeight='bold' onClick={() => router.push("/products")}>Products</Button>
               <Button color="#201e26" fontWeight='bold' >Our Story</Button>
   
               <IconButton

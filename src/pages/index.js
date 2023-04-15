@@ -1,9 +1,9 @@
-import { NavBar } from "@/components/navbar";
+import { NavBar } from "@/components/constants/navbar";
 // import { CaptionCarousel } from "@/components/carousel";
-import { FooterComponent } from "@/components/footer";
-import { FeaturedProducts } from "@/components/featuredProduct";
-import { GridBlurredBackdrop } from "@/components/testemonials";
-import { SplitScreen } from "@/components/hero";
+import { FooterComponent } from "@/components/constants/footer";
+import { FeaturedProducts } from "@/landingPage/featuredProduct";
+import { GridBlurredBackdrop } from "@/landingPage/testemonials";
+import { SplitScreen } from "@/landingPage/hero";
 
 export default function Main() {
   return (
