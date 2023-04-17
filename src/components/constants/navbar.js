@@ -33,7 +33,6 @@ import {
   export function NavBar() {
     const router = useRouter();
     return (
-      <>
         <Box
           style={{
             backgroundColor: "#f0f4f7",
@@ -70,7 +69,7 @@ import {
               {/* <ProductCategories 
               padding="0 1rem"
               /> */}
-              <Button color="#201e26" fontWeight='bold' onClick={() => router.push("/products")}>Products</Button>
+              <Button color="#201e26" fontWeight='bold' onClick={() => router.push("/products/all")}>Products</Button>
               <Button color="#201e26" fontWeight='bold' >Our Story</Button>
   
               <IconButton
@@ -92,7 +91,6 @@ import {
             </div>
           </Container>
         </Box>
-      </>
     );
   }
   

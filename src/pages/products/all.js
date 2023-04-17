@@ -6,6 +6,7 @@ import { AllProducts } from '@/components/products/allProducts';
 export default function products() {
     return (
         <>
+        <title>Products</title>
         {/* <NavBar /> */}
 
         <AllProducts />

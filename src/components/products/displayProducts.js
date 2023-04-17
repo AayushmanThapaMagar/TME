@@ -11,6 +11,7 @@ export function Product({ product }) {
   const IMAGE = product.images[0].file.url;
   return (
     <a href={`/products/${product.id}`}>
+    {/* <a href={"/productb n"}> */}
       <Box
         role={"group"}
         p={6}
