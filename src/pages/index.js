@@ -1,4 +1,5 @@
-import { NavBar } from "@/components/constants/navbar";
+// import { NavBar } from "@/components/constants/navbar";
+import { NavBar } from "../components/constants/navbar";
 // import { CaptionCarousel } from "@/components/carousel";
 import { FooterComponent } from "@/components/constants/footer";
 import { FeaturedProducts } from "@/landingPage/featuredProduct";

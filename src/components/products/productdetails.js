@@ -14,11 +14,46 @@ import {
     TabList, 
     TabPanels, 
     Tab, 
-    TabPanel
+    TabPanel,
+    // NumberInput,
+    // NumberInputField,
+    // NumberInputStepper,
+    // NumberIncrementStepper,
+    // NumberDecrementStepper,
+    useNumberInput,
+    HStack,
+    Input,
   } from "@chakra-ui/react";
+
+  import { useState } from "react";
+
+  import { CartComponent } from "./cart";
 
   
   export function InfoProductDetails({ product }) {
+
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+    const productID = product.id;
+
+    const { getInputProps, getIncrementButtonProps, getDecrementButtonProps } =
+    useNumberInput({
+      defaultValue: 1,
+      min: 1,
+    })
+
+    const inc = getIncrementButtonProps()
+    const dec = getDecrementButtonProps()
+    const input = getInputProps()
+
+    const handleOpenDrawer = () => {
+      setIsDrawerOpen(true);
+    };
+
+
+    const handleCloseDrawer = () => {
+      setIsDrawerOpen(false);
+    };
+
     return (
       <Container maxW={"7xl"}>
       <SimpleGrid
@@ -82,6 +117,7 @@ import {
             </Box>
           </Stack>
 
+          <Flex>
           <Button
             rounded={"full"}
             w={"full"}
@@ -96,10 +132,22 @@ import {
               boxShadow: "lg",
               bg: "#ff9500",
             }}
+            onClick={handleOpenDrawer}
           >
             Add to cart
           </Button>
+
+          <HStack maxW='320px'>
+          <Button {...dec}>-</Button>
+          <Input {...input} />
+          <Button {...inc}>+</Button>
+          
+          </HStack>
+          </Flex>
+
         </Stack>
+
+        <CartComponent isOpen={isDrawerOpen} onClose = {handleCloseDrawer} productID={productID} source = {"addBtn"}/>
       </SimpleGrid>
     </Container>
     )

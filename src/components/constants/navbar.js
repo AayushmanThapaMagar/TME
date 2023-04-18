@@ -9,7 +9,9 @@ import {
   import { ProductCategories } from "../productCategories";
   import { HiShoppingCart } from "react-icons/hi";
   import { useRouter } from "next/router";
-  
+  import { CartComponent } from "../products/cart";
+  import { useState } from "react";
+
   const Logo = (props) => {
     return (
       <svg
@@ -31,6 +33,18 @@ import {
   };
   
   export function NavBar() {
+
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+    const handleOpenDrawer = () => {
+      setIsDrawerOpen(true);
+    };
+
+
+    const handleCloseDrawer = () => {
+      setIsDrawerOpen(false);
+    };
+
     const router = useRouter();
     return (
         <Box
@@ -75,8 +89,9 @@ import {
               <IconButton
                 aria-label="My Cart"
                 icon={<HiShoppingCart />}
+                onClick={handleOpenDrawer}
               ></IconButton>
-  
+              <CartComponent isOpen={isDrawerOpen} onClose = {handleCloseDrawer} />
               <Button
                 rounded={"full"}
                 bg={"#ecbf75"}

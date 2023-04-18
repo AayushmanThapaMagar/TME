@@ -1,4 +1,4 @@
-import { NavBar } from "@/components/constants/navbar";
+import { NavBar } from "./../../components/constants/navbar";
 import { useRouter } from "next/router";
 import swell from "@/utils/swell";
 import { useEffect, useState } from "react";
